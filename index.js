@@ -39,7 +39,7 @@ app.listen(port, () => {
 });
 
 app.get("/lista", (req, res) => {
-  let query = "SELECT * from operaciones order by fecha asc";
+  let query = "SELECT * from operaciones order by fecha desc";
 
   connection.query(query, function (err, rows, fields) {
     if (err) {
